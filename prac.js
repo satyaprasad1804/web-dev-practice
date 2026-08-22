@@ -350,12 +350,61 @@
 // })
 
 
-let input=document.querySelector(".input");
-input.addEventListener("mousedown",(event)=>{
-  if(event.button==0){
-    console.log('left click');
-  }
-  else {
-    console.log('right click');
-  }
-})
+// let input=document.querySelector(".input");
+// input.addEventListener("mousedown",(event)=>{
+//   if(event.button==0){
+//     console.log('left click');
+//   }
+//   else {
+//     console.log('right click');
+//   }
+// })
+
+
+// -------------------Bubbling--------------------------
+
+let div=document.querySelector("#div");
+let h1=document.querySelector("#h1");
+let p=document.querySelector("#p");
+// div.addEventListener("click",(e)=>{
+//            e.stopPropagation()           //to stop bubbling to parent c\element only particular ele is triggred
+//     alert("div clicked");
+// })
+// h1.addEventListener("click",(e)=>{
+//       e.stopPropagation()
+//     alert("h1 clicked")
+// })
+// p.addEventListener("click",(e)=>{
+//              e.stopPropagation()
+//     alert("p clicked");
+// })
+
+
+
+
+
+
+
+// -------------capturing---------------
+
+// div.addEventListener("click",()=>{
+//     alert("div clicked");
+// },true)
+// h1.addEventListener("click",()=>{
+//     alert("h1 clicked")
+// },true)
+// p.addEventListener("click",()=>{
+//     alert("p clicked");
+// },true)
+
+
+
+let parent=document.getElementById("parent");
+let container=document.createElement("div");
+container.classList.add("container");
+parent.append(container)
+
+let img=document.createElement("img");
+img.setAttribute("src","./TodoList/pic.png");
+img.setAttribute("alt","this is img");
+container.append(img);
