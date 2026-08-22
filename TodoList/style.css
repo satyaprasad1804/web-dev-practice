@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+}
+#banner{
+    background: url(./pic.png);
+    height: 40vh;
+    display: flex;;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap : 30px
+    
+}
+#banner h1, #banner p{
+    color: white;
+}
+
+#banner input, #banner button{
+    height: 40px;
+}
+#banner input{
+    width: 50vw;
+    border-radius: 30px;
+    box-shadow: 2px 5px 10px rgb(15, 56, 90);
+    text-align: center;
+}
+
+#banner button{
+    width: 80px;
+    border-radius: 50px;
+    padding: 0px 10px;
+}
+
+#main{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 50px;
+    gap: 30px;
+    margin: 10px;
+    box-shadow: 2px 5px 10px teal;
+}
+
+.task button{
+    width: 60px;
+    border: 1px solid rgb(160, 160, 14);
+    border-radius: 50%;
+    box-shadow: 2px 5px 10px palegreen;
+}
+.task button :hover{
+    background-color: #4CAF50;
+    font-size: large;
+}

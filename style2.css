@@ -1,0 +1,30 @@
+#btnstart{
+    height:50px;
+    width:100px;
+    border-radius: 10%;
+}
+#btncount{
+    height:500%;
+    width:100px;
+    border-radius:10%;
+}
+#btnstop{
+    height:50px;
+    width:100px;
+    border-radius:10%;
+    cursor:pointer;
+
+}
+.btn-red{
+    background-color:red;
+    color:aliceblue;
+}
+.container{
+    display:flex;
+    grid: auto auto / auto auto auto auto; 
+    grid-gap: 8px; 
+    background-color: green; 
+    flex-direction:row;
+    justify-content: center; 
+    /* align-items: center;  */
+}
