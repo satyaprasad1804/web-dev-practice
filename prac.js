@@ -363,9 +363,9 @@
 
 // -------------------Bubbling--------------------------
 
-let div=document.querySelector("#div");
-let h1=document.querySelector("#h1");
-let p=document.querySelector("#p");
+// let div=document.querySelector("#div");
+// let h1=document.querySelector("#h1");
+// let p=document.querySelector("#p");
 // div.addEventListener("click",(e)=>{
 //            e.stopPropagation()           //to stop bubbling to parent c\element only particular ele is triggred
 //     alert("div clicked");
@@ -397,14 +397,35 @@ let p=document.querySelector("#p");
 //     alert("p clicked");
 // },true)
 
+// ---------------html js-------------------------
+
+// let parent=document.getElementById("parent");
+// let container=document.createElement("div");
+// container.classList.add("continer");
+// parent.append(container)
+
+// let img=document.createElement("img");
+// img.setAttribute("src","./TodoList/pic.png");
+// img.setAttribute("alt","this is img");
+// container.append(img);
 
 
-let parent=document.getElementById("parent");
-let container=document.createElement("div");
-container.classList.add("container");
-parent.append(container)
 
-let img=document.createElement("img");
-img.setAttribute("src","./TodoList/pic.png");
-img.setAttribute("alt","this is img");
-container.append(img);
+
+// -----------------dev tools testing-----------------------------
+
+function calculateTotal(price, quantity) {
+    let subtotal = price * quantity;
+    let taxRate = 0.08;
+    let taxAmount = subtotal * taxRate;
+    let total = subtotal + taxAmount;
+    console.log('Subtotal:', subtotal);
+    console.log('Tax Amount:', taxAmount);
+    console.log('Total:', total);
+    return total;
+}
+
+let itemPrice = 25;
+let itemCount = 4;
+let finalPrice = calculateTotal(itemPrice, itemCount);
+console.log('Final Price:', finalPrice);
