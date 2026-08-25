@@ -414,18 +414,169 @@
 
 // -----------------dev tools testing-----------------------------
 
-function calculateTotal(price, quantity) {
-    let subtotal = price * quantity;
-    let taxRate = 0.08;
-    let taxAmount = subtotal * taxRate;
-    let total = subtotal + taxAmount;
-    console.log('Subtotal:', subtotal);
-    console.log('Tax Amount:', taxAmount);
-    console.log('Total:', total);
-    return total;
-}
+// function calculateTotal(price, quantity) {
+//     let subtotal = price * quantity;
+//     let taxRate = 0.08;
+//     let taxAmount = subtotal * taxRate;
+//     let total = subtotal + taxAmount;
+//     console.log('Subtotal:', subtotal);
+//     console.log('Tax Amount:', taxAmount);
+//     console.log('Total:', total);
+//     return total;
+// }
 
-let itemPrice = 25;
-let itemCount = 4;
-let finalPrice = calculateTotal(itemPrice, itemCount);
-console.log('Final Price:', finalPrice);
+// let itemPrice = 25;
+// let itemCount = 4;
+// let finalPrice = calculateTotal(itemPrice, itemCount);
+// console.log('Final Price:', finalPrice);
+
+
+
+// -------------setTimeOut-----------------------
+
+// function greet(){
+//     console.log("good morning");
+// }
+// console.log("riya");
+
+// setTimeout(greet,1000*2);
+
+
+// // ......................setInterval---------------------
+// let count=0;
+// let inval=null
+// function counting(){
+//      count++;
+//      console.log({counter:count})
+//       if(count==1){
+//         clearInterval(inval);
+//     }
+// }
+// inval=setInterval(counting,2000)
+
+
+
+
+// callback function
+
+// function greet(name,callback){
+//     console.log(`Hello ${name}`);
+//     callback();
+// }
+// function bye(){
+//     console.log("bye");
+// }
+// // passing bye fun as an argument to greet() which is callback
+// greet("Riya",bye);
+
+
+// Asynchronous -----------------
+// setTimeout(()=>{
+//     console.log("morning")
+// },3000)
+// console.log("Good");
+
+
+// // callback hell
+// function fetchdata(callback){
+//     console.log("data fetched");
+//     callback();
+// }
+// function process(callback){
+//     console.log("processed");
+//     callback();
+// }
+// function display(){
+//     console.log("displayed");
+// }
+
+// fetchdata(function(){
+//     process( function(){
+//        display()
+//     })
+// });
+
+
+
+// ------------PRoMISES-----------------------
+
+// let response = fetch("https://jsonplaceholder.typicode.com/users/1");
+// response
+// .then(function(response){
+//     return response.json();
+// })
+// .then(function(data){
+//     console.log(data);
+// })
+// .catch(function(error){
+//     console.log("error",error)
+// })
+
+
+
+// let checkEven = new Promise((resolve, reject) => {
+//     let number = 3;
+//     if (number % 2 === 0) resolve("The number is even!");
+//     else reject("The number is odd!");
+// });
+// checkEven
+//     .then((message) => console.log(message)) // On success
+//     .catch((error) => console.error(error)); // 
+
+
+// let issucess=false;
+// let promise=new Promise((resolve,reject)=>{
+//     if(issucess){
+//        resolve("sucess");
+//     }
+//     else{
+//         reject("error");
+//     }
+// });
+// promise
+// .then((response)=>console.log(response))
+// .catch((error)=>console.log(error))
+
+
+// ------------------Promise.all()------------------
+
+
+// const promise1=Promise.resolve(10);
+// const promise2=new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//        reject(20)
+//     },2000)
+// })
+
+// const promise3=Promise.resolve(3);
+
+// Promise.all([])
+// .then((response)=>console.log(response))
+// .catch((error)=>console.log(error))
+
+
+
+// -------------------promise1.allSettled------------------
+
+// const p1=Promise.resolve("promise 1")
+// const p2=new Promise((resolve,reject)=>{
+//     reject("promise2");
+// })
+// const p3=Promise.resolve("promise 3");
+
+// Promise.allSettled([p1,p2,p3])
+// .then((response)=>console.log(response))
+// .catch((error)=>console.log(error));
+
+
+// const p=async ()=>{
+//     try{
+//         let promise= await fetch("https://jsonplaceholder.typicode.com/users/1")
+//         let response= await promise.json();
+//         console.log(response);
+//     }
+//     catch(err){
+//         console.log("error",err);
+//     }
+// }
+// p();
