@@ -11,3 +11,9 @@
 // console.log(fun1(x));
 
 
+// string concatination converts number to string
+let c="324";
+let a=21;
+let b=32;
+
+console.log(c+a+b)
